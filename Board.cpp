@@ -177,7 +177,7 @@ int Board::size()const
 
     while(fileExists(fileNameTemp))
     {
-       fileNameTemp =fileName+to_string(i)+".ppm";
+       fileNameTemp ="board"+to_string(i)+".ppm";
        i++;
     }
     fileName=fileNameTemp;	    
