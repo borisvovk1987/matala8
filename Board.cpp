@@ -122,7 +122,7 @@ std::istream & operator>>(istream & in, Board & board)
 		}
 		if (i != board.size() - 1)
 		{
-			is >> st;
+			in >> st;
 		}
 	}
 	return in;
