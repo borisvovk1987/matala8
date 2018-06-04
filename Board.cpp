@@ -1,6 +1,5 @@
 #include"Board.h"
-#include<thread>
-#include<chrono>
+
 
 
 
@@ -243,7 +242,6 @@ int Board::size()const
     imageFile.write(reinterpret_cast<char*>(&image), 3*size*size);
     imageFile.close();
     
-    this_thread::sleep_for(chrono::seconds(2));
 
     return fileName;
 }
