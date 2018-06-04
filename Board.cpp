@@ -62,6 +62,7 @@ std::ostream& operator<<(std::ostream& out,const Board &board)
     }
     return out;
 }
+/*
 std::istream& operator>>(std::istream& in,Board &board)
 {
 	std::string path="";
@@ -105,6 +106,27 @@ std::istream& operator>>(std::istream& in,Board &board)
 	return in;
 
 
+}
+*/
+std::istream & operator>>(istream & is, Board & b)
+{
+	string st("");
+	//stringstream ss("");
+	is >> st;
+	b = Board(st.size());
+	for (int i = 0; i < b.m_boardSize; i++)
+	{
+		for (int j = 0; j < b.m_boardSize; j++)
+		{
+			b.m_board[i][j].setChar(st[j]);
+
+		}
+		if (i != b.size() - 1)
+		{
+			is >> st;
+		}
+	}
+	return is;
 }
 
 Board& Board::operator=(const Board& other)
