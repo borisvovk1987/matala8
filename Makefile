@@ -1,4 +1,3 @@
-
 CXX=clang++-5.0
 CXXFLAGS=-std=c++17	
 	
@@ -23,4 +22,4 @@ Content.o:Content.cpp Content.h IllegalCharException.h
 	$(CXX) $(CXXFLAGS) --compile Content.cpp -o Content.o 
 
 IllegalCoordinateException.o:IllegalCoordinateException.cpp IllegalCoordinateException.h 
-	$(CXX) $(CXXFLAGS) --compile IllegalCoordinateException.cpp -o IllegalCoordinateException.o
+$(CXX) $(CXXFLAGS) --compile IllegalCoordinateException.cpp -o IllegalCoordinateException.o
