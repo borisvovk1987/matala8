@@ -171,13 +171,13 @@ int Board::size()const
     string Board::draw(int size)
 {
 
-    string fileName="board";
+    string fileName="board"+".ppm";
     string fileNameTemp=fileName;
     int i=0;
 
     while(fileExists(fileNameTemp))
     {
-       fileNameTemp =fileName+to_string(i);
+       fileNameTemp =fileName+to_string(i)+".ppm";
        i++;
     }
     fileName=fileNameTemp;	    
