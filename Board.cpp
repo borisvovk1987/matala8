@@ -180,6 +180,7 @@ int Board::size()const
        fileNameTemp =fileName+to_string(i);
        i++;
     }
+    fileName=fileNameTemp;	    
     const int dimx=size,dimy=size;
     ofstream imageFile(fileNameTemp, ios::out | ios::binary);
     imageFile << "P6" << endl << dimx <<" " << dimy << endl << 255 << endl;
