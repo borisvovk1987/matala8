@@ -111,7 +111,6 @@ std::istream& operator>>(std::istream& in,Board &board)
 std::istream & operator>>(istream & is, Board & b)
 {
 	string st("");
-	//stringstream ss("");
 	is >> st;
 	b = Board(st.size());
 	for (int i = 0; i < b.m_boardSize; i++)
