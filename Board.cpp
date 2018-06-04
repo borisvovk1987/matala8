@@ -108,24 +108,24 @@ std::istream& operator>>(std::istream& in,Board &board)
 
 }
 */
-std::istream & operator>>(istream & is, Board & b)
+std::istream & operator>>(istream & in, Board & board)
 {
 	string st("");
-	is >> st;
-	b = Board(st.size());
-	for (int i = 0; i < b.m_boardSize; i++)
+	in >> st;
+	board = Board(st.size());
+	for (int i = 0; i < board.m_boardSize; i++)
 	{
-		for (int j = 0; j < b.m_boardSize; j++)
+		for (int j = 0; j < board.m_boardSize; j++)
 		{
-			b.m_board[i][j].setChar(st[j]);
+			board.m_board[i][j].setChar(st[j]);
 
 		}
-		if (i != b.size() - 1)
+		if (i != board.size() - 1)
 		{
 			is >> st;
 		}
 	}
-	return is;
+	return in;
 }
 
 Board& Board::operator=(const Board& other)
